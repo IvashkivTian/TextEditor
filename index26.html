@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" href="style.css">
+	 <script src="jquery3.1.1.js"></script>
+    <script src="jquery-ui.js"></script>
+</head>
+<body>
+	<div id="save_text">
+        <p id="text">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Et eaque harum, ipsa ipsum veniam debitis doloremque excepturi asperiores ad tenetur vero maxime fuga nulla possimus cumque iusto laudantium, recusandae quibusdam.
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nostrum rem modi tempora non, labore consequatur sunt id. Quam libero, repudiandae nihil. Laborum debitis veritatis, accusamus dolorum, ex enim non nesciunt.
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Et eaque harum, ipsa ipsum veniam debitis doloremque excepturi asperiores ad tenetur vero maxime fuga nulla possimus cumque iusto laudantium, recusandae quibusdam.
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nostrum rem modi tempora non, labore consequatur sunt id. Quam libero, repudiandae nihil. Laborum debitis veritatis, accusamus dolorum, ex enim non nesciunt.
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Et eaque harum, ipsa ipsum veniam debitis doloremque excepturi asperiores ad tenetur vero maxime fuga nulla possimus cumque iusto laudantium, recusandae quibusdam.
+        </p>
+	</div>
+	<div id="edit_button">
+		<form name="f1">
+                <input type="button" id="edit" class="button" value="Edit">
+                <input type="button" id="style" class="button" value="Style">    
+                <input type="button" id="block" class="button" value="Block">    
+		</form>
+	</div>
+	<div id="edit_text">
+		<form name="f2" action="#">
+			<textarea width="80%" height="400px" id="textarea"></textarea>
+                    <input type="button" id="save" class="button" value="Save">
+                    <input type="button" id="add" class="button" value="Add"> 
+		</form>
+	</div>
+    
+        <div id="btn_style">
+            <div class="font">
+                <div id="text_size">
+                         <form name="f3" id="form">
+                           Text size:<label>
+                            <input type="radio" name="font_size" value="12pt">12pt</label>
+                            <label>
+                            <input type="radio" name="font_size" value="14pt">14pt</label>
+                            <label>
+                            <input type="radio" name="font_size" value="18pt">18pt</label>
+                            <label>
+                            <input type="radio" name="font_size" value="20pt">20pt</label>
+                        </form>    
+                    </div>
+                    <br>
+                <form name="f6">
+                        Font family:
+                        <select id="font_familly" name="font_fam">
+                          <option value="Tahoma" selected>Tahoma</option>
+                          <option value="Arial">Arial</option>
+                          <option value="Helvetica">Helvetica</option>
+                          <option value="Georgia">Georgia</option>
+                        </select>
+                </form>
+                    <br>
+                    <br>
+                    <br>
+                <form name="f7">
+                    <div class="style_col_bg">
+                    <div id="btns">
+                        <input type="button" id="color" class="button" value="Col">
+                        <input type="button" id="bgcol" class="button" value="BgCol">
+                    </div>
+                        <div id="col_bg_btns">
+                            <div id="color_table">
+                            <div class="col">
+                                <div class="col_cell" id="col1"></div>
+                                <div class="col_cell" id="col2"></div>
+                                <div class="col_cell" id="col3"></div>
+                            </div>
+                            <div class="col">
+                                <div class="col_cell" id="col4"></div>
+                                <div class="col_cell" id="col5"></div>
+                                <div class="col_cell" id="col6"></div>
+                            </div>
+                            <div class="col">
+                                <div class="col_cell" id="col7"></div>
+                                <div class="col_cell" id="col8"></div>
+                                <div class="col_cell" id="col9"></div>
+                            </div>
+                    
+                        </div>
+                
+                        
+                        <div id="bgcol_table">
+                            <div class="bgcolor">
+                                <div class="bgcol_cell" id="bgcol1"></div>
+                                <div class="bgcol_cell" id="bgcol2"></div>
+                                <div class="bgcol_cell" id="bgcol3"></div>
+                            </div>
+                            <div class="bgcolor">
+                                <div class="bgcol_cell" id="bgcol4"></div>
+                                <div class="bgcol_cell" id="bgcol5"></div>
+                                <div class="bgcol_cell" id="bgcol6"></div>
+                            </div>
+                            <div class="bgcolor">
+                                <div class="bgcol_cell" id="bgcol7"></div>
+                                <div class="bgcol_cell" id="bgcol8"></div>
+                                <div class="bgcol_cell" id="bgcol9"></div>
+                            </div>
+                    
+                        </div>
+                    </div>
+                    </div>
+                    </form>
+                    <br>
+                    <br>
+                    <div id="font_style">
+                        <form name="f8">
+                            <input type="checkbox" name="bold" id="bold">Bold text
+                            <input type="checkbox" name="italic" id="italic">Italic text
+                        </form>
+                    </div>
+            </div>
+        </div>
+    
+        <div id="choose_to_add" >
+            <form name="f4" id="t_form">
+                <h1><b>Choose what to add:</b></h1>
+                <br>
+                <div class="choose_table">
+                    <input type="radio" name="add"  id="table">Table
+                    <input type="radio" name="add"  id="list">List
+                </div>
+                <br>
+                <div class="table_list">
+                    <div id="table_block">
+                        <div class="choose_table">
+                            <form name="f9">
+                            <label>Input count of row:
+                            <input type="text" name="row" id="table_row" class="pop_up" autocomplete="off"></label>
+                            <span id="popup">Введіть число від 1 до 99</span>
+                            <br>
+                            <br>
+                            <label>Input count of cell:
+                            <input type="text" name="cell" id="table_cell"class="pop_up" autocomplete="off" ></label>
+                            <span id="popup1">Введіть число від 1 до 99</span>
+                        <br>
+                        <br>
+                            <p><b>Table style:</b></p>
+                        <br>
+                        <br>
+                            <label>Input width of cell:
+                            <input type="text" name="w_cell" id="width_cell" class="pop_up" autocomplete="off" ></label>
+                                <span id="popup2">Введіть число більше 10</span>
+                        <br>
+                        <br>
+                            <label>Input height of cell:
+                            <input type="text" name="h_cell" id="height_cell" class="pop_up" autocomplete="off" ></label>
+                                <span id="popup3">Введіть число від 1 до 99</span>
+                        <br>
+                        <br>
+                            <label>Border width:
+                               <input type="text" name="border" id="w_border" class="pop_up" autocomplete="off" >
+                            </label>
+                                <span id="popup4">Введіть число від 1 до 99</span>
+                                </form>
+                            <label>Border type:
+                                <select id="style_border">
+                                    <option>solid</option>
+                                    <option>dashed</option>
+                                    <option>double</option>
+                                    <option>dotted</option>
+                                </select>
+                            </label>
+                            <label>Border color:
+                                <select id="col_border">
+                                    <option>black</option>
+                                    <option>red</option>
+                                    <option>blue</option>
+                                </select>
+                            </label>
+                                
+                        </div>
+                        <br>
+                        <input type="button" id="create_btn" class="button" value="Create">
+<!--                        <a href="#" id="create_btn">Create</a>-->
+                    </div>
+                    <br>
+                    <div class="list" id="choose_list" >
+                        <div class="choose_lst">
+                            
+                          <div id="inputs">
+                              <p><b>Select unordered or ordered list</b></p>
+                                <input type="button" class="button" id="ul" value="Marker">
+                                <input type="button" class="button" id="ol" value="Number">
+                         </div>
+                            <div id="Unordered_List">
+                            <label><b>Type of unordered list:</b>
+                                <select id="type_ul">
+                                    <option>circle</option>
+                                    <option>disk</option>
+                                    <option>square</option>
+                                </select></label>
+                                <br>
+                                <br>
+                                <label>Input count of list items:
+                            <input type="text" name="items" id="list_items_ul" class="pop_up" autocomplete="off"></label>
+                                <span id="popup5">Введіть число від 1 до 99</span>
+                            <br>
+                            <br>
+                            <br>
+                                <input type="button" id="create_list_btn" class="button" value="Create">
+                                </div>
+                            
+                            <div id="Ordered_List">
+                            <label><b>Type of ordered list:</b>
+                                <select id="type_ol">
+                                    <option value="1">арабські цифри</option>
+                                    <option value="I">римські цифри</option>
+                                    <option value="A">великі літери</option>
+                                    <option value="a">малі літери</option>
+                                </select></label>
+                                <br>
+                                <br>
+                                <label>Input count of list items:
+                            <input type="text" name="items" id="list_items_ol" class="pop_up" autocomplete="off"></label>
+                                <span id="popup6">Введіть число від 1 до 99</span>
+                            <br>
+                            <br>
+                            <br>
+                                <input type="button" id="create_listOl_btn" class="button" value="Create">
+                                </div>
+                            
+                        </div>
+                    </div>
+                </div> 
+            </form>
+        </div>
+        <div id="modal">
+            <div class="modal_content">
+            <p>Програма заблокована. Введіть пароль, щоб розблокувати.</p>
+            <form name="f10">
+               <img id="img1" src="img/lock.png">
+<!--               <img id="img2" src="img/lock-open.png">-->
+                <div id="to_pass">
+            <label><b>Введіть пароль:("tttt")</b>
+                <br>
+                <input type="password" name="pass" id="mod_pass" placeholder="Введіть пароль"></label>
+                    </div>
+            <br>
+                <input type="button" name="exit" id="exit" class="mod_btn" value="Вхід">
+                </form>
+                </div>
+        </div>
+   
+     <script src="script.js"></script>
+    
+</body>
+</html>
